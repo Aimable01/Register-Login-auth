@@ -20,7 +20,7 @@ userSchema.pre('save', async function(next){
 
 //compare the passwords
 userSchema.methods.comparePassword = async function(candidatePassword){
-    return comparePassword(candidatePassword, this.password)
+    return bcrypt.compare(candidatePassword, this.password)
 }
 
 const User = mongoose.model('User', userSchema)

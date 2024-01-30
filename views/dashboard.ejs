@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Dashboard</title>
 </head>
-<body>
-    <h2>Welcome <%- username %></h2>
-    <a href="app/login">Log out</a>
+<body class="bg-indigo-600 flex justify-center items-center min-h-10">
+    <div class="bg-gray-300 p-10 rounded-md mt-20">
+        <h2 class="m-5 text-2xl">Welcome <%- username %></h2>
+        <a class="px-2 py-1 m-5 rounded-md bg-indigo-600 hover:bg-indigo-700" href="login">Log out</a>
+    </div>
 </body>
 </html>
